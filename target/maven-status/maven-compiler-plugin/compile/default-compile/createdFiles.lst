@@ -1,2 +1,3 @@
 connector/MongoConnector.class
 util/UtilJson.class
+enums/ValueClass.class
