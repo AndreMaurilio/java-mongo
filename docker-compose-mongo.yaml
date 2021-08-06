@@ -1,0 +1,33 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodbdata:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: root
+#    command: ["apt-get", "-y", "install", "vim"]
+#
+#  volumes:
+#    mongodbdata:
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8028:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+      ME_CONFIG_MONGODB_URL: mongodb://admin:root@mongo:27017/
+
+
+volumes:
+  mongodbdata:
