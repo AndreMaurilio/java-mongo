@@ -1,6 +1,5 @@
-package service;
+package app.service;
 
-import domain.model.Car;
 
 public interface CarService {
 

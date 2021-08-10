@@ -1,16 +1,22 @@
-package domain.model;
+package app.domain.model;
 
 
-import domain.enums.Days;
+import app.domain.enums.Days;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 
-
-@Document("carros")
+@Data
+@Document(collection = "automoveis")
 public class Car {
 
     @Id
+    @MongoId(value = FieldType.OBJECT_ID)
+    private String id;
     private String placa;
     private String modelo;
     private String marca;
@@ -31,53 +37,19 @@ public class Car {
 
     }
 
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
+    public Car(String id, String placa, String modelo, String marca, String cor, String ano, Double valor) {
+        this.id = id;
         this.placa = placa;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
         this.modelo = modelo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
         this.marca = marca;
-    }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
         this.cor = cor;
-    }
-
-    public String getAno() {
-        return ano;
-    }
-
-    public void setAno(String ano) {
         this.ano = ano;
-    }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
         this.valor = valor;
     }
+
+    public Car(){};
+
+
 
 
 

@@ -1,10 +1,10 @@
-package service.serviceimpl;
+package app.service.serviceimpl;
 
-import domain.model.Car;
+import app.domain.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.CarRepository;
-import service.CarService;
+import app.repository.CarRepository;
+import app.service.CarService;
 
 import java.util.Optional;
 
@@ -18,8 +18,8 @@ public class CarServiceImpl implements CarService {
     public String noDriveDay(String placa) {
 
 
-        Optional<Car> carOpt = carRepository.findById(placa);
-        Car car = carOpt.get();
+        carRepository.findAll();
+        Car car = carRepository.findByPlaca(placa);
 
         return car.carDrive().getCarNoDriveDay();
     }

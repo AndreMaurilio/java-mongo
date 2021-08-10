@@ -1,4 +1,4 @@
-package connector;
+package app.connector;
 
 //import com.mongodb.*;
 //import com.mongodb.client.MongoCollection;
