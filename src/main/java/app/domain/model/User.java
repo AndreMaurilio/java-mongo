@@ -1,14 +1,17 @@
 package app.domain.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
+@Data
 @Document("usuarios")
 public class User {
 
@@ -20,6 +23,7 @@ public class User {
     private String nome;
     private String email;
     private String dataNascimento;
+    @DBRef
     private List<Car> carros;
 
     public User(String cpf, String email, String nome, String dataNascimento, List<Car> carros) {
@@ -32,5 +36,12 @@ public class User {
 
     public User(){}
 
+    public void addCar(Car carro){
+        if(this.getCarros() == null){
+            this.setCarros(new ArrayList<>());
+        }
+        this.getCarros().add(carro);
+
+    }
 
 }

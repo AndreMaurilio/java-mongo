@@ -19,18 +19,23 @@ public class CarController {
     private CarService carService;
 
 
-    @GetMapping(value = "/hello")
-    public String carCanDrive(){
-
-        return "hello world";
-    }
 
 
-    @GetMapping(value = "/candrive")
+    @GetMapping(value = "/nodrive")
     public ResponseEntity<String> carCanDrive(@RequestParam String plate){
 
         String day = carService.noDriveDay(plate);
 
         return ResponseEntity.ok().body(day);
     }
+
+    @GetMapping(value = "/allow")
+    public ResponseEntity<Boolean> carAllowDriveToday(@RequestParam String plate){
+
+        Boolean candrive = carService.carCanDriveToday(plate);
+
+        return ResponseEntity.ok().body(candrive);
+    }
+
+
 }
