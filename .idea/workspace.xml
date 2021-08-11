@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98f4ec08-1d32-4262-84c5-027948825f33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/insert-examples/insert-user.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/CarRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/serviceimpl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/serviceimpl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/config/DatabaseChangeLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/DatabaseChangeLog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,11 +137,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/app/connector/MongoConnector.java</url>
           <line>38</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/config/DatabaseChangeLog.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/app/controller/CarController.java</url>

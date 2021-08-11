@@ -22,16 +22,11 @@ public class DatabaseChangeLog {
     @ChangeSet(order="001",id = "mock de 1000 veiculos",author="Andre")
     public void seedDataBase(MongoDatabase db) throws IOException, ParseException {
 
-        UtilJson utilJson = new UtilJson("/home/andre/Documentos/workspace/java-mongo/MOCK_DATA.json");        List<Document>docs = new ArrayList<>();
-        MongoCollection<Document> carros = db.getCollection("automoveis");
-//        docs.add(new Document("placa","DBZ-111").append("modelo","Golf").append("marca","VolksWagen").append("cor","Preto").append("ano","2012").append("valor",45000.00));
-//        docs.add(new Document("placa","AFG-125").append("modelo","Corsa").append("marca","GM").append("cor","Azul").append("ano","1999").append("valor",9000.00));
-//        docs.add(new Document("placa","TTR-784").append("modelo","Tiguam").append("marca","VolksWagen").append("cor","Branco").append("ano","2016").append("valor",125000.00));
-//        docs.add(new Document("placa","KQY-887").append("modelo","Passat").append("marca","VolksWagen").append("cor","Verde").append("ano","2020").append("valor",98000.00));
-//        docs.add(new Document("placa","OLJ-336").append("modelo","EcoSport").append("marca","Ford").append("cor","Cinza").append("ano","2011").append("valor",36000.00));
-//
-         docs = utilJson.readJsonArray(utilJson.getPath());
-         carros.insertMany(docs);
+        UtilJson utilJson = new UtilJson(System.getProperty("user.dir")+"/MOCK_DATA.json");
+        List<Document>docs = new ArrayList<>();
+        MongoCollection<Document> carros = db.getCollection("automoveis");//
+        docs = utilJson.readJsonArray(utilJson.getPath());
+        carros.insertMany(docs);
 
     }
 }
