@@ -1,2 +1,2 @@
 # java-mongo
-Estudo de aplicação Java com banco MongoDB em Docker.
+Estudo de aplicação Spring Boot com banco MongoDB em Docker e data migration com Mongock.
